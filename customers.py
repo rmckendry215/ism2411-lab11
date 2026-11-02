@@ -33,13 +33,16 @@ print(customer.get('email', 'no email on file'))
 # except KeyError as error:
 #     print("KeyError caught: ", error)
 
+print("--- Exercise 4 ---")
+
 for key, value in customer.items():
     print(f"{key}: {value}")
 
 for something in customer:
     print(something, customer[something])
 
-print("--- Exercise 4 ---")
+print("--- Exercise 5 ---")
+
 tier_discounts = { 
     "bronze": 0, 
     "silver": 0.05, 
@@ -53,8 +56,6 @@ final_price = purchase * (1 - discount_rate)
 print(f"Tier: {customer['tier']})")
 print(f"Discount Rate: {discount_rate*100}%")
 print(f"Final Price: ${final_price:.2f}")
-
-print("--- Exercise 5 ---")
 
 print("--- Exercise 6 ---")
 customers = [
@@ -99,7 +100,7 @@ for region in sorted(sales_by_region):
 # Reflection Questions: [2-3 sentences each]
 
 # In Exercise 3 you saw the difference between .get() and bracket notation. When in real work would you use each one, and what's your rule of thumb for choosing?
-#
+# I use .get() when a key might be missing. I use brackets when the key should always be there.
 
 # Exercise 8 asked you to build a summary dictionary with a loop. What does this pattern remind you of from Excel, and why might the Python version be more useful for large datasets?
-#
+# This reminds me of a pivot table in Excel because it totals sales by region. Python makes it easy to repeat this with lots of data.
