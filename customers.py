@@ -93,7 +93,8 @@ for sale in transactions:
 
 print(sales_by_region)
 
-
+for region in sorted(sales_by_region):
+    print(f"{region}: ${sales_by_region[region]:.2f}")
 
 # Reflection Questions: [2-3 sentences each]
 
