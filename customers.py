@@ -54,8 +54,32 @@ print(f"Tier: {customer['tier']})")
 print(f"Discount Rate: {discount_rate*100}%")
 print(f"Final Price: ${final_price:.2f}")
 
+print("--- Exercise 5 ---")
 
-# Reflection Questions: Answer in 2-3 sentences each.
+print("--- Exercise 6 ---")
+customers = [
+    {"name": "Bob", "tier": "silver", "ytd_spend": 3200},
+    {"name": "Carol", "tier": "gold", "ytd_spend": 8750},
+    {"name": "David", "tier": "bronze", "ytd_spend": 450},
+]
+
+for record in customers:
+    rate = tier_discounts.get(record['tier'], 0)
+    discount = 300 * rate
+    print(f"{record['name']} ({record['tier']}): ${discount:.2f} off a $300 purchase")
+
+print("--- Exercise 7 ---")
+catalog = {
+    "Widget A": {"price": 9.99, "stock": 150},
+    "Gadget C": {"price": 49.99, "stock": 8},
+}
+for name, details in catalog.items():
+    print(f"LOW STOCK: {name} - only {details['stock']} left")
+
+print("--- Exercise 8 ---")
+
+
+# Reflection Questions: [2-3 sentences each]
 
 # In Exercise 3 you saw the difference between .get() and bracket notation. When in real work would you use each one, and what's your rule of thumb for choosing?
 #
