@@ -68,6 +68,8 @@ for record in customers:
     discount = 300 * rate
     print(f"{record['name']} ({record['tier']}): ${discount:.2f} off a $300 purchase")
 
+# Nested Catalog Exercise 7
+
 print("--- Exercise 7 ---")
 catalog = {
     "Widget A": {"price": 9.99, "stock": 150},
@@ -77,6 +79,20 @@ for name, details in catalog.items():
     print(f"LOW STOCK: {name} - only {details['stock']} left")
 
 print("--- Exercise 8 ---")
+transactions = [
+    {"region": "South", "amount": 300},
+    {"region": "North", "amount": 150},
+    {"region": "South", "amount": 200},
+]
+
+sales_by_region = {}
+for sale in transactions:
+    region = sale['region']
+    amount = sale['amount']
+    sales_by_region[region] = sales_by_region.get(region, 0) + amount
+
+print(sales_by_region)
+
 
 
 # Reflection Questions: [2-3 sentences each]
